@@ -48,7 +48,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: center; /* Centers the text within each element */
+        text-align: center;
       }
 
       .text-button {
@@ -63,17 +63,21 @@
       .margin-top1r {
         margin-top: 1rem;
       }
+      #displayData {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="back-button">
-        <a href="#" onclick="window.history.back(); return false;"
-          >&#x3c; Back</a
-        >
+        <a href="#" onclick="window.history.back(); return false;">&#x3c; Back</a>
       </div>
       <div class="form-logo"></div>
-      <form class="visa-form">
+      <form id="visaForm" class="visa-form">
         <div class="form-group">
           <label for="idNumber">ID Number / Passport</label>
           <input
@@ -96,6 +100,16 @@
             placeholder="Surname"
           />
         </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+        </div>
         <div class="form-group dob-group">
           <label for="dob">Date of Birth</label>
           <div class="dob-fields">
@@ -110,7 +124,6 @@
             <option value="">Select</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-            <option value="other">Other</option>
           </select>
         </div>
         <div class="form-group">
@@ -139,13 +152,55 @@
         <div class="center-container">
           <div class="inline-text margin-top1r">
             <span>Already have an account?</span>
-            <strong
-              ><a href="/pages/login.html" class="text-button">Login</a></strong
-            >
+            <strong><a href="/pages/login.html" class="text-button">Login</a></strong>
           </div>
         </div>
       </form>
+      <div class="center-container">
+        <button id="loadDataButton" class="submit-button">Load Stored Application</button>
+        <div id="displayData"></div>
+      </div>
     </div>
-    <script src="/assets/js/tojson.js"></script>
+    <script>
+      document.getElementById('visaForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Gather form data
+        const formData = {
+          idNumber: document.getElementById('idNumber').value,
+          name: document.getElementById('name').value,
+          surname: document.getElementById('surname').value,
+          email: document.getElementById('email').value,
+          dobDay: document.getElementById('dobDay').value,
+          dobMonth: document.getElementById('dobMonth').value,
+          dobYear: document.getElementById('dobYear').value,
+          gender: document.getElementById('gender').value,
+          password: document.getElementById('password').value,
+        };
+
+        // Store form data in localStorage
+        localStorage.setItem('visaApplication', JSON.stringify(formData));
+
+        // Notify user
+        alert('Application stored locally!');
+      });
+
+      document.getElementById('loadDataButton').addEventListener('click', function() {
+        const storedData = JSON.parse(localStorage.getItem('visaApplication'));
+
+        if (storedData) {
+          document.getElementById('displayData').innerHTML = `
+            <p><strong>ID Number / Passport:</strong> ${storedData.idNumber}</p>
+            <p><strong>Name:</strong> ${storedData.name}</p>
+            <p><strong>Surname:</strong> ${storedData.surname}</p>
+            <p><strong>Email:</strong> ${storedData.email}</p>
+            <p><strong>Date of Birth:</strong> ${storedData.dobDay}-${storedData.dobMonth}-${storedData.dobYear}</p>
+            <p><strong>Gender:</strong> ${storedData.gender}</p>
+          `;
+        } else {
+          document.getElementById('displayData').innerHTML = 'No stored application found.';
+        }
+      });
+    </script>
   </body>
 </html>
