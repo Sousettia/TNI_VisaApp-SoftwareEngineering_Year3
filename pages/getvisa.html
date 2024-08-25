@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/assets/css/dropdown.css">
+    <link rel="stylesheet" href="/assets/css/navbar.css">
+    <script src="https://kit.fontawesome.com/fae1994b1d.js" crossorigin="anonymous"></script>
+    <style>
+      body {
+          background-color: #f8faff;
+          margin: 0;
+          font-family: 'Arial', sans-serif;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+      }
+      
+      .container {
+          width: 70%;
+          max-width: 900px;
+          text-align: center;
+          background-color: #ffffff;
+          padding: 40px;
+          border-radius: 16px;
+          box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      
+      h1 {
+          font-size: 36px;
+          color: #6279FF;
+          margin-bottom: 40px;
+          font-weight: 300;
+      }
+      
+      .visa-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      
+      .form-group {
+          width: 100%;
+          margin-bottom: 20px;
+      }
+      
+      label {
+          display: block;
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 8px;
+          font-weight: 600;
+          text-align: left;
+      }
+      
+  </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Get Your Visa</h1>
+        <div class="visa-form">
+            <div class="form-group">
+                <label for="VisaDropdown">Type of your VISA?</label>
+                <div class="dropdown">
+                    <button class="dropbtn" id="VisaDropdown">Select Type <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-content"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="countryDropdown">Where am I from?</label>
+                <div class="dropdown">
+                    <button class="dropbtn" id="countryDropdown">Select Country <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-content"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="destinationDropdown">Where am I going?</label>
+                <div class="dropdown">
+                    <button class="dropbtn" id="destinationDropdown">Select Destination <i class="fa-solid fa-caret-down"></i></button>
+                    <div class="dropdown-content"></div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-button">Get Started</button>
+        </div>
+    </div>
+
+    <script src="/assets/js/countries.js"></script>
+    <script src="/assets/js/visaTypes.js"></script>
+    <script src="/assets/js/dropdown.js"></script>
+</body>
+</html>

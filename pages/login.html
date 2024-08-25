@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
+    <style>
+      .container {
+        width: 80%;
+        height: 80%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      body {
+        background-color: #a4c0ff;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .styled-main_logo {
+        width: 500px;
+        height: auto;
+        display: block;
+      }
+      .login-form {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 150%;
+        max-width: 300px;
+      }
+
+      .input-field {
+        width: 150%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .submit-button {
+        width: 157%;
+        padding: 10px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .submit-button:hover {
+        background-color: #3797fd;
+      }
+      .text-button {
+        color: #007bff;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        text-decoration: underline;
+      }
+
+      .text-button:hover {
+        color: #0056b3;
+        text-decoration: none;
+      }
+
+      .invisible-text {
+        opacity: 0;
+      }
+
+      .margin-top1r {
+        margin-top: 1rem;
+      }
+
+      .margin-top3r {
+        margin-top: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <img src="/assets/image/main_logo.png" alt="main logo" class="styled-main_logo" />
+      <form class="login-form margin-top3r">
+        <input type="text" placeholder="Username" class="input-field" />
+        <input type="password" placeholder="Password" class="input-field" />
+        <button type="submit" class="submit-button">Login</button>
+      </form>
+      <div class="inline-text margin-top1r">
+        <span>Not a member?</span>
+        <strong><a href="/forms/register.html" class="text-button">Register now</a></strong>
+        <span class="invisible-text">Text</span>
+        <span>Forgot Password?</span>
+        <strong><a href="resetpw.html" class="text-button">Reset now</a></strong>
+      </div>
+    </div>
+  </body>
+</html>
