@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="/assets/css/nav.css" />
+    <link rel="stylesheet" href="/assets/css/profile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="#">
+        <img src="/assets/image/Logo_w.png" class="logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- TODO:how to hide login button when profile is Showing -->
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <img
+        src="/assets/image/user_icon.png"
+        class="user-pic"
+        onclick="toggleMenu()"
+      />
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <a href="#" class="sub-menu-link">
+            <img src="/assets/image/profile.png" />
+            <!-- Use User name from Register -->
+            <p>James Johnson</p>
+            <span>></span>
+          </a>
+          <hr />
+          <!-- under line -->
+          <a href="#" class="sub-menu-link">
+            <img src="/assets/image/logout.png" />
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="box1">
+        <h1>Profile</h1>
+        <div class="profile-info">
+          <div class="profile-pic">
+            <!-- Use User Profile Picture from Register -->
+            <img src="/assets/image/user_icon.png" />
+          </div>
+          <div class="user-details">
+            <h2>James Johnson</h2>
+            <p>123 Main St, City, State, 12345</p>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: 123-456-7890</p>
+          </div>
+        </div>
+        <div class="profile-buttons">
+          <button>Edit Profile</button>
+          <button>Delete Account</button>
+        </div>
+        <!-- end of profile-info div -->
+      </div>
+      <!-- end of box1 div -->
+      <div class="box2">
+        <h1>Visa Form</h1>
+        <div class="form-info">
+          <div class="form-pic">
+            <!-- Use User Profile Picture from Register -->
+            <img src="/assets/image/forms.png" />
+          </div>
+        </div>
+        <div class="form-buttons">
+          <button>View My Visa Form</button>
+          <button>Clear Visa Form</button>
+        </div>
+        <!-- end of profile-info div -->
+      </div>
+      <!-- end of box2 div -->
+      <div class="box3">
+        <h1>Reset Password</h1>
+        <div class="password-info">
+          <div class="password-pic">
+            <!-- Use User Profile Picture from Register -->
+            <img src="/assets/image/reset-password.png" />
+          </div>
+        </div>
+        <div class="password-buttons">
+          <button>Reset Password</button>
+        </div>
+        <!-- end of profile-info div -->
+      </div>
+      <!-- end of box3 div -->
+    </div>
+    <!-- end of container div -->
+    <script>
+      let subMenu = document.getElementById("subMenu");
+
+      function toggleMenu() {
+        console.log("Menu toggled");
+        subMenu.classList.toggle("open-menu");
+      }
+    </script>
+  </body>
+</html>

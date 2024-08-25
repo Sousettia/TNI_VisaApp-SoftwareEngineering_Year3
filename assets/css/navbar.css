@@ -1,5 +1,5 @@
 :root {
-  --nav-bg-color: #6279FF;
+  --nav-bg-color: #6279ff;
   --nav-link-color: white;
   --nav-link-hover-color: #ddd;
 }
@@ -10,7 +10,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding: 15px 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
