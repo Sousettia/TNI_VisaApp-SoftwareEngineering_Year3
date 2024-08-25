@@ -1,0 +1,47 @@
+:root {
+  --nav-bg-color: #6279FF;
+  --nav-link-color: white;
+  --nav-link-hover-color: #ddd;
+}
+
+nav {
+  width: 100%;
+  background-color: var(--nav-bg-color);
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 0;
+  font-family: 'Arial', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures the navbar is above other content */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: var(--nav-link-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--nav-link-hover-color);
+}
+
+body {
+  margin-top: 60px; /* Adds space to prevent content from being hidden under the navbar */
+}
