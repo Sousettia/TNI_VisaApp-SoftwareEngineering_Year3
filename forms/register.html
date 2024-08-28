@@ -69,12 +69,22 @@
         padding: 10px;
         border-radius: 5px;
       }
+      .dob-fields {
+        display: flex;
+        gap: 10px;
+      }
+
+      .dob-fields select {
+        flex: 1;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="back-button">
-        <a href="#" onclick="window.history.back(); return false;">&#x3c; Back</a>
+        <a href="#" onclick="window.history.back(); return false;"
+          >&#x3c; Back</a
+        >
       </div>
       <div class="form-logo"></div>
       <form id="visaForm" class="visa-form">
@@ -113,11 +123,23 @@
         <div class="form-group dob-group">
           <label for="dob">Date of Birth</label>
           <div class="dob-fields">
-            <input type="text" id="dobDay" name="dobDay" placeholder="DD" />
-            <input type="text" id="dobMonth" name="dobMonth" placeholder="MM" />
-            <input type="text" id="dobYear" name="dobYear" placeholder="YYYY" />
+            <label for="dobDay" class="visually-hidden">Day</label>
+            <select id="dobDay" name="dobDay">
+              <option value="">DD</option>
+            </select>
+
+            <label for="dobMonth" class="visually-hidden">Month</label>
+            <select id="dobMonth" name="dobMonth">
+              <option value="">MM</option>
+            </select>
+
+            <label for="dobYear" class="visually-hidden">Year</label>
+            <select id="dobYear" name="dobYear">
+              <option value="">YYYY</option>
+            </select>
           </div>
         </div>
+
         <div class="form-group">
           <label for="gender">Gender</label>
           <select id="gender" name="gender">
@@ -152,55 +174,21 @@
         <div class="center-container">
           <div class="inline-text margin-top1r">
             <span>Already have an account?</span>
-            <strong><a href="/pages/login.html" class="text-button">Login</a></strong>
+            <strong
+              ><a href="/pages/login.html" class="text-button">Login</a></strong
+            >
           </div>
         </div>
       </form>
       <div class="center-container">
-        <button id="loadDataButton" class="submit-button">Load Stored Application</button>
+        <button id="loadDataButton" class="submit-button">
+          Load Stored Application
+        </button>
         <div id="displayData"></div>
       </div>
     </div>
-    <script>
-      document.getElementById('visaForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Gather form data
-        const formData = {
-          idNumber: document.getElementById('idNumber').value,
-          name: document.getElementById('name').value,
-          surname: document.getElementById('surname').value,
-          email: document.getElementById('email').value,
-          dobDay: document.getElementById('dobDay').value,
-          dobMonth: document.getElementById('dobMonth').value,
-          dobYear: document.getElementById('dobYear').value,
-          gender: document.getElementById('gender').value,
-          password: document.getElementById('password').value,
-        };
-
-        // Store form data in localStorage
-        localStorage.setItem('visaApplication', JSON.stringify(formData));
-
-        // Notify user
-        alert('Application stored locally!');
-      });
-
-      document.getElementById('loadDataButton').addEventListener('click', function() {
-        const storedData = JSON.parse(localStorage.getItem('visaApplication'));
-
-        if (storedData) {
-          document.getElementById('displayData').innerHTML = `
-            <p><strong>ID Number / Passport:</strong> ${storedData.idNumber}</p>
-            <p><strong>Name:</strong> ${storedData.name}</p>
-            <p><strong>Surname:</strong> ${storedData.surname}</p>
-            <p><strong>Email:</strong> ${storedData.email}</p>
-            <p><strong>Date of Birth:</strong> ${storedData.dobDay}-${storedData.dobMonth}-${storedData.dobYear}</p>
-            <p><strong>Gender:</strong> ${storedData.gender}</p>
-          `;
-        } else {
-          document.getElementById('displayData').innerHTML = 'No stored application found.';
-        }
-      });
-    </script>
+    <script src="/assets/js/setLocalStorage.js"></script> 
+    <script src="/assets/js/loadLocalStorage.js"></script>
+    <script src="/assets/js/dob.js"></script>
   </body>
 </html>

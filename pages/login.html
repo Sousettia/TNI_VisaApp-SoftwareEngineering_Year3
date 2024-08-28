@@ -111,7 +111,7 @@
   <body>
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="getvisa.html">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="login.html">Login</a></li>
@@ -125,10 +125,23 @@
         class="styled-main_logo"
       />
       <form class="login-form margin-top3r">
-        <input type="text" placeholder="Username" class="input-field" />
-        <input type="password" placeholder="Password" class="input-field" />
+        <input
+          type="text"
+          id="username"
+          placeholder="Username"
+          class="input-field"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Password"
+          class="input-field"
+          required
+        />
         <button type="submit" class="submit-button">Login</button>
       </form>
+
       <div class="inline-text margin-top1r">
         <span>Not a member?</span>
         <strong
@@ -143,5 +156,6 @@
         >
       </div>
     </div>
+    <script src="/assets/js/loginValidation.js"></script>
   </body>
 </html>
