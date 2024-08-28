@@ -21,6 +21,7 @@ document.querySelector(".login-form").addEventListener("submit", function (e) {
   if (storedData) {
     if (username === storedData.email && password === storedData.password) {
       alert("Login successful!");
+      localStorage.setItem("userLoggedIn", "true");
       // Redirect to another page or perform other actions
       window.location.href = "/pages/getvisa.html";
     } else {
@@ -30,3 +31,4 @@ document.querySelector(".login-form").addEventListener("submit", function (e) {
     alert("No user data found.");
   }
 });
+

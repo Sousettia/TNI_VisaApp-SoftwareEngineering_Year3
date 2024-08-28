@@ -69,10 +69,10 @@
   <body>
     <nav>
       <a href="#">
-        <img src="/assets/image/Logo_w.png" class="logo" alt="logo"/>
+        <img src="/assets/image/Logo_w.png" class="logo" alt="logo" />
       </a>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="getvisa.html">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
         <!-- TODO: how to hide login button when profile is Showing -->
@@ -87,15 +87,15 @@
       <div class="sub-menu-wrap" id="subMenu">
         <div class="sub-menu">
           <a href="#" class="sub-menu-link">
-            <img src="/assets/image/profile.png" alt=""/>
+            <img src="/assets/image/profile.png" alt="" />
             <!-- TODO: Use User name from Register -->
-            <p>James Johnson</p>
+            <p id="username">James Johnson</p>
             <span>></span>
           </a>
           <hr />
           <!-- under line -->
-          <a href="#" class="sub-menu-link">
-            <img src="/assets/image/logout.png" alt=""/>
+          <a href="#" class="sub-menu-link logout-button">
+            <img src="/assets/image/logout.png" alt="" />
             <p>Logout</p>
             <span>></span>
           </a>
@@ -142,13 +142,7 @@
     <script src="/assets/js/countries.js"></script>
     <script src="/assets/js/visaTypes.js"></script>
     <script src="/assets/js/dropdown.js"></script>
-    <script>
-      let subMenu = document.getElementById("subMenu");
-
-      function toggleMenu() {
-        console.log("Menu toggled");
-        subMenu.classList.toggle("open-menu");
-      }
-    </script>
+    <script src="/assets/js/hide-login.js"></script>
+    <script src="/assets/js/logout.js"></script>
   </body>
 </html>
