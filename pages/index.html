@@ -1,0 +1,155 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/nav_profile.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="#">
+        <img src="/assets/image/Logo_w.png" class="logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- TODO:how to hide login button when profile is Showing -->
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <img
+        src="/assets/image/user_icon.png"
+        class="user-pic"
+        onclick="toggleMenu()"
+      />
+      <div class="sub-menu-wrap" id="subMenu">
+        <div class="sub-menu">
+          <a href="#" class="sub-menu-link">
+            <img src="/assets/image/profile.png" />
+            <!-- Use User name from Register -->
+            <p>James Johnson</p>
+            <span>></span>
+          </a>
+          <hr />
+          <!-- under line -->
+          <a href="#" class="sub-menu-link">
+            <img src="/assets/image/logout.png" />
+            <p>Logout</p>
+            <span>></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <!-- INTRODUCTION -->
+      <div class="intro">
+        <div class="salute">
+          <div class="saluteTextContainer">
+            <h1 class="saluteText">Welcome</h1>
+          </div>
+          <div class="saluteImgContainer">
+            <img src="/assets/image/person.png" alt="" class="saluteImg" />
+          </div>
+        </div>
+        <div class="nameContainer">
+          <h2 class="name">Everyone</h2>
+        </div>
+        <div class="jobTitleContainer dark">
+          <h2 class="jobTitle">Enjoy your Life</h2>
+        </div>
+        <div class="jobTitleContainer purple">
+          <h2 class="jobTitle">and get your VISA</h2>
+        </div>
+      </div>
+      <!-- PROJECTS -->
+      <div class="projects">
+        <h1 class="projectsTitle">Here what you can do here</h1>
+        <div class="project">
+          <div class="phone">
+            <img src="/assets/image/phone.png" alt="" />
+            <div class="phoneScreen">
+              <img src="/assets/image/Frame 1.svg" alt="" class="phoneApp" />
+            </div>
+          </div>
+          <div class="projectDetail">
+            <h1 class="projectTitle">Manage Your Personal Information</h1>
+            <p class="projectDesc">
+              1. Register and log in to manage your personal details such as
+              date of birth, ID number,<br />
+              passport number, and address. <br />2. Easily update your personal
+              information through your profile.
+            </p>
+            <!-- <button class="projectButton">Learn More</button> -->
+          </div>
+        </div>
+        <div class="project">
+          <div class="laptop">
+            <img src="/assets/image/laptop.png" alt="" />
+            <div class="laptopScreen">
+              <img src="/assets/image/Frame 2.svg" alt="" class="laptopApp" />
+            </div>
+          </div>
+          <div class="projectDetail">
+            <h1 class="projectTitle">
+              Select and Complete Your Visa Application
+            </h1>
+            <p class="projectDesc">
+              1. Choose the country and type of visa you need (e.g., work visa,
+              student visa).<br />The system will autofill basic information
+              from your registration and assist in completing <br />2. Provide
+              additional details required by the visa form for the selected
+              country.
+            </p>
+            <!-- <button class="projectButton">Learn More</button> -->
+          </div>
+        </div>
+        <div class="project">
+          <div class="phone">
+            <img src="/assets/image/phone.png" alt="" />
+            <div class="phoneScreen">
+              <img src="/assets/image/Frame 3.svg" alt="" class="phoneApp" />
+            </div>
+          </div>
+          <div class="projectDetail">
+            <h1 class="projectTitle">Download Your Completed Visa Document</h1>
+            <p class="projectDesc">
+              1. Review and save your filled-out application as a PDF. <br />
+              2. Download the completed visa document for your application
+              process.
+            </p>
+            <!-- <button class="projectButton">Learn More</button> -->
+          </div>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="bottomContainer">
+        <h1 class="bottomTitle">Make your VISA</h1>
+        <div class="bottomChart">
+          <div class="boxContainer"></div>
+          <h1 class="bottomTitle">Here</h1>
+        </div>
+        <div class="bottomSm">
+          <a href="">
+            <img src="/assets/image/enter.png" alt="" />
+          </a>
+          <h2>Make your VISA Now</h2>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/app.js"></script>
+    <script>
+      let subMenu = document.getElementById("subMenu");
+
+      function toggleMenu() {
+        console.log("Menu toggled");
+        subMenu.classList.toggle("open-menu");
+      }
+    </script>
+  </body>
+</html>
