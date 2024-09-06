@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,40 +13,8 @@
     />
   </head>
   <body>
-    <nav>
-      <a href="#">
-        <img src="/assets/image/Logo_w.png" class="logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <!-- TODO:how to hide login button when profile is Showing -->
-        <li><a href="login.html">Login</a></li>
-      </ul>
-      <img
-        src="/assets/image/user_icon.png"
-        class="user-pic"
-        onclick="toggleMenu()"
-      />
-      <div class="sub-menu-wrap" id="subMenu">
-        <div class="sub-menu">
-          <a href="#" class="sub-menu-link">
-            <img src="/assets/image/profile.png" />
-            <!-- Use User name from Register -->
-            <p>James Johnson</p>
-            <span>></span>
-          </a>
-          <hr />
-          <!-- under line -->
-          <a href="#" class="sub-menu-link">
-            <img src="/assets/image/logout.png" />
-            <p>Logout</p>
-            <span>></span>
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar-container"></div>
+    <!-- Placeholder for the navbar -->
     <div class="container">
       <!-- INTRODUCTION -->
       <div class="intro">
@@ -143,12 +112,18 @@
       </div>
     </div>
     <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/loginValidation.js"></script>
+    <script src="/assets/js/loadNavbar.js"></script>
     <script>
-      let subMenu = document.getElementById("subMenu");
+      function clearLocalStorageData() {
+        // List of keys to remove from localStorage
+        const keysToRemove = ["userLoggedIn"]; // replace with your actual keys
 
-      function toggleMenu() {
-        console.log("Menu toggled");
-        subMenu.classList.toggle("open-menu");
+        keysToRemove.forEach((key) => {
+          localStorage.removeItem(key);
+        });
+
+        console.log("Specific localStorage items cleared");
       }
     </script>
   </body>

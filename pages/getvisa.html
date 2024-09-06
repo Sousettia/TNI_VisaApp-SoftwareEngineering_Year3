@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
     <link rel="stylesheet" href="/assets/css/dropdown.css" />
-    <link rel="stylesheet" href="/assets/css/nav.css" />
+    <link rel="stylesheet" href="/assets/css/nav_profile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -67,41 +67,7 @@
     </style>
   </head>
   <body>
-    <nav>
-      <a href="#">
-        <img src="/assets/image/Logo_w.png" class="logo" alt="logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="getvisa.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <!-- TODO: how to hide login button when profile is Showing -->
-        <li><a href="login.html">Login</a></li>
-      </ul>
-      <img
-        src="/assets/image/user_icon.png"
-        class="user-pic"
-        onclick="toggleMenu()"
-        alt=""
-      />
-      <div class="sub-menu-wrap" id="subMenu">
-        <div class="sub-menu">
-          <a href="#" class="sub-menu-link">
-            <img src="/assets/image/profile.png" alt="" />
-            <!-- TODO: Use User name from Register -->
-            <p id="username">James Johnson</p>
-            <span>></span>
-          </a>
-          <hr />
-          <!-- under line -->
-          <a href="#" class="sub-menu-link logout-button">
-            <img src="/assets/image/logout.png" alt="" />
-            <p>Logout</p>
-            <span>></span>
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar-container"></div>
     <div class="container">
       <h1>Get Your Visa</h1>
       <div class="visa-form">
@@ -142,7 +108,7 @@
     <script src="/assets/js/countries.js"></script>
     <script src="/assets/js/visaTypes.js"></script>
     <script src="/assets/js/dropdown.js"></script>
-    <script src="/assets/js/hide-login.js"></script>
-    <script src="/assets/js/logout.js"></script>
+    <script src="/assets/js/loginValidation.js"></script>
+    <script src="/assets/js/loadNavbar.js"></script>
   </body>
 </html>
