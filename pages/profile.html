@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <link rel="stylesheet" href="/assets/css/nav.css" />
+    <link rel="stylesheet" href="/assets/css/nav_profile.css" />
     <link rel="stylesheet" href="/assets/css/profile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,40 +14,7 @@
     />
   </head>
   <body>
-    <nav>
-      <a href="#">
-        <img src="/assets/image/Logo_w.png" class="logo" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <!-- TODO:how to hide login button when profile is Showing -->
-        <li><a href="login.html">Login</a></li>
-      </ul>
-      <img
-        src="/assets/image/user_icon.png"
-        class="user-pic"
-        onclick="toggleMenu()"
-      />
-      <div class="sub-menu-wrap" id="subMenu">
-        <div class="sub-menu">
-          <a href="profile.html" class="sub-menu-link">
-            <img src="/assets/image/profile.png" />
-            <!-- Use User name from Register -->
-            <p>James Johnson</p>
-            <span>></span>
-          </a>
-          <hr />
-          <!-- under line -->
-          <a href="login.html" class="sub-menu-link">
-            <img src="/assets/image/logout.png" />
-            <p>Logout</p>
-            <span>></span>
-          </a>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar-container"></div>
     <div class="container">
       <div class="box1">
         <h1>Profile</h1>
@@ -101,14 +68,7 @@
       <!-- end of box3 div -->
     </div>
     <!-- end of container div -->
-    <script>
-      let subMenu = document.getElementById("subMenu");
-
-      function toggleMenu() {
-        console.log("Menu toggled");
-        subMenu.classList.toggle("open-menu");
-      }
-    </script>
     <script src="/assets/js/loginValidation.js"></script>
+    <script src="/assets/js/loadNavbar.js"></script>
   </body>
 </html>
