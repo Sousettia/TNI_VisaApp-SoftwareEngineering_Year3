@@ -35,9 +35,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 20px;
+            margin-top: 10px;
             margin-left: 20px;
-            margin-right: 20px;
+            margin-right: 60px;
         }
         .profile-container img {
             display: block;
@@ -68,6 +68,9 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            width: 100%;
+            max-width: 80px;
+            flex:1;
         }
         .profile-container .save-btn {
             background-color: #007bff;
@@ -86,21 +89,23 @@
             margin-right: 20px;
         }
         .btn{
-            margin-left: 70%;
+            display: flex;
+            gap: 10px;
         }
-        .save-btn{
-            width: 50%;
-            height: 50%;
-            justify-content: center;
-            align-items: center;
-            padding: 3px;
+        .actions{
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            width: 100%;
+            margin-top: 3px;
+            margin-left: 82%;
+            margin-bottom: 3px;
         }
-        .cancel-btn{
-            width: 50%;
-            height: 50%;
-            justify-content: center;
-            align-items: center;
-            padding: 3px;
+        button {
+            flex: 1;
+            padding: 10px;
+            min-width: 80px; 
+            text-align: center;
         }
         #city{
             width: 100%;
@@ -115,7 +120,7 @@
 <body>
     <div class="profile-container">
         <div class="header-container">
-            <div><h2>Edit Profile</h2></div>
+            <div><h1>Edit Profile</h1></div>
             <div><img class="icon" src="/assets/image/user_icon.png"></div>
         </div>
         <div class="form-container">
