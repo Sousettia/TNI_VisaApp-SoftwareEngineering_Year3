@@ -1,0 +1,93 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-color: #a4c0ff;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.styled-main_logo {
+  width: 500px;
+  height: auto;
+  display: block;
+}
+.login-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150%;
+  max-width: 300px;
+}
+
+.input-field {
+  width: 150%;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  width: 161%;
+  padding: 15px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #92e5ff;
+  color: #ffffff;
+}
+.text-button {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+.text-button:hover {
+  color: #92e5ff;
+  text-decoration: none;
+}
+
+.invisible-text {
+  opacity: 0;
+}
+
+.margin-top1r {
+  margin-top: 1rem;
+}
+
+.margin-top3r {
+  margin-top: 3rem;
+}
+
+#main-logo {
+  max-inline-size: 200px;
+  inline-size: 100%;
+  margin-block-end: 20px;
+  object-fit: contain;
+  block-size: auto;
+  display: block;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block-start: 50px;
+}

@@ -1,0 +1,64 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+.back-button {
+  margin: 20px;
+  font-size: 16px;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.back-button a:hover {
+  color: #0056b3;
+}
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.text-button {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.text-button:hover {
+  color: #0056b3;
+}
+.margin-top1r {
+  margin-top: 1rem;
+}
+#displayData {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+.dob-fields {
+  display: flex;
+  gap: 10px;
+}
+
+.dob-fields select {
+  flex: 1;
+}
