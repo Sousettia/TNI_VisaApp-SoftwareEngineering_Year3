@@ -1,10 +1,3 @@
-// Function to toggle the submenu
-function toggleMenu() {
-  console.log("Menu toggled");
-  const subMenu = document.getElementById("subMenu");
-  subMenu.classList.toggle("open-menu");
-}
-
 // Function to load the navbar
 function loadNavbar() {
   fetch("navbar.html")
@@ -16,7 +9,6 @@ function loadNavbar() {
       const userPic = document.querySelector(".user-pic");
       const subMenu = document.getElementById("subMenu");
       const loginButton = document.querySelector(".login-button");
-      
 
       if (userPic) {
         userPic.addEventListener("click", () => {
@@ -25,13 +17,9 @@ function loadNavbar() {
         });
 
         const isLoggedIn = localStorage.getItem("userLoggedIn"); // Check if user is logged in
-        const storedName = localStorage.getItem("userName");
-        const displayElement = document.getElementById("nameDisplay");
-
         if (isLoggedIn) {
           userPic.style.display = "block";
           loginButton.style.display = "none";
-          displayElement.textContent = storedName;
         } else {
           userPic.style.display = "none";
           loginButton.style.display = "block";
@@ -48,11 +36,43 @@ function loadNavbar() {
           window.location.href = "login.html"; // Redirect to the login page
         });
       }
+
+      // Load user details for the navbar
+      loadUserDetails();
     })
     .catch((error) => console.error("Error loading navbar:", error));
+}
+
+// Function to load user details
+function loadUserDetails() {
+  const storedData = localStorage.getItem("visaForm");
+  if (storedData) {
+    const formData = JSON.parse(storedData);
+
+    const elements = [
+      { id: "nav_nameDisplay", value: `${formData.firstname} ${formData.lastname}` },
+      { id: "p_nameDisplay", value: `${formData.firstname} ${formData.lastname}` },
+      { id: "p_id", value: `ID : ${formData.idNumber}` },
+      { id: "p_birth", value: `Birth Date : ${formData.dobDay}/${formData.dobMonth}/${formData.dobYear}` },
+      { id: "p_gender", value: `Gender : ${formData.gender}` },
+      { id: "p_emailDisplay", value: `Email : ${formData.email}` }
+    ];
+
+    elements.forEach(element => {
+      const el = document.getElementById(element.id);
+      if (el) {
+        el.textContent = element.value;
+      } else {
+        console.error(`Element with ID '${element.id}' not found`);
+      }
+    });
+  } else {
+    console.error("No data found in localStorage with key 'visaForm'");
+  }
 }
 
 // Run when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   loadNavbar();
+  loadUserDetails(); // Load user details on page load for profile
 });

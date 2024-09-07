@@ -27,7 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (username === storedData.email && password === storedData.password) {
           alert("Login successful!");
           localStorage.setItem("userLoggedIn", "true");
-          localStorage.setItem("userName", storedData.name + " " + storedData.surname);
+          localStorage.setItem(
+            "userName",
+            storedData.firstname + " " + storedData.lastname
+          );
           // Redirect to another page or perform other actions
           window.location.href = "/pages/getvisa.html";
         } else {
@@ -39,3 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document
+  .getElementById("deleteAccountBtn")
+  .addEventListener("click", function () {
+    // Clear localStorage
+    localStorage.removeItem("visaForm");
+    localStorage.removeItem("userLoggedIn");
+    localStorage.removeItem("userName");
+
+    // Notify user
+    alert("Account deleted successfully!");
+  });

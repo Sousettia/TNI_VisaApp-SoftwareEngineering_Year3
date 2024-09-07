@@ -35,8 +35,8 @@ document.getElementById("visaForm").addEventListener("submit", function (e) {
   // Gather form data
   const formData = {
     idNumber: idInput,
-    name: document.getElementById("name").value,
-    surname: document.getElementById("surname").value,
+    firstname: document.getElementById("firstname").value,
+    lastname: document.getElementById("lastname").value,
     email: emailInput,
     dobDay: document.getElementById("dobDay").value,
     dobMonth: document.getElementById("dobMonth").value,

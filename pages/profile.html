@@ -24,15 +24,18 @@
             <img src="/assets/image/user_icon.png" />
           </div>
           <div class="user-details">
-            <h2>James Johnson</h2>
-            <p>123 Main St, City, State, 12345</p>
-            <p>Email: john.doe@example.com</p>
-            <p>Phone: 123-456-7890</p>
+            <h2 id="p_nameDisplay"></h2>
+            <p id="p_id"></p>
+            <p id="p_birth"></p>
+            <p id="p_gender"></p>
+            <p id="p_emailDisplay"></p>
           </div>
         </div>
         <div class="profile-buttons">
-          <button>Edit Profile</button>
-          <button>Delete Account</button>
+          <a href="editprofile.html"><button>Edit Profile</button></a>
+          <a href="login.html">
+            <button type="button" id="deleteAccountBtn">Delete Account</button>
+          </a>
         </div>
         <!-- end of profile-info div -->
       </div>
