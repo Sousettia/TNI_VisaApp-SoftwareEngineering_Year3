@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
     <link rel="stylesheet" href="/assets/css/font.css" />
-    <link rel="stylesheet" href="/assets/css/login.css">
-    <link rel="stylesheet" href="/assets/css/nav_profile.css" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+    <!-- <link rel="stylesheet" href="/assets/css/nav_profile.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <div id="navbar-container"></div>
+    <!-- <div id="navbar-container"></div> -->
     <div class="container">
       <img
         id="main-logo"
@@ -41,18 +41,22 @@
         <button type="submit" class="submit-button">Login</button>
       </form>
 
-      <div class="inline-text margin-top1r">
-        <span>Not a member?</span>
-        <strong
-          ><a href="/pages/register.html" class="text-button"
-            >Register now</a
-          ></strong
-        >
+      <div id="question-container" class="margin-top1r">
+        <div class="member">
+          <span class="question">Not a member?</span>
+          <strong
+            ><a href="/pages/register.html" class="text-button"
+              >Register now</a
+            ></strong
+          >
+        </div>
         <span class="invisible-text">Text</span>
-        <span>Forgot Password?</span>
-        <strong
-          ><a href="resetpw.html" class="text-button">Reset now</a></strong
-        >
+        <div class="reset">
+          <span class="question">Forgot Password?</span>
+          <strong
+            ><a href="resetpw.html" class="text-button">Reset now</a></strong
+          >
+        </div>
       </div>
     </div>
     <script src="/assets/js/loginValidation.js"></script>

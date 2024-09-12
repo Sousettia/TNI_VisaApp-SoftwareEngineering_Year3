@@ -1,40 +1,94 @@
 body {
-  background-color: #f8faff;
+  background: linear-gradient(to right, #eef2fd, #f8faff);
   margin: 0;
   font-family: "Roboto", sans-serif;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .container {
-  width: 70%;
-  max-width: 900px;
-  text-align: center;
+  margin-top: 120px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  height: 600px;
+}
+.selection-container {
+  width: 100%;
+  max-width: 700px;
   background-color: #ffffff;
   padding: 40px;
   border-radius: 16px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-h1 {
-  font-size: 36px;
-  color: #6279ff;
-  margin-bottom: 40px;
+.head-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.type-title {
+  align-items: start;
+  width: 40%;
+  font-size: 48px;
+  color: #a4c0ff;
+  margin-right: 170px;
   font-weight: 300;
+}
+
+.type-select-section {
+  width: 60%;
+  margin-left: 130px;
+  justify-content: space-between;
+  align-items: end;
+  display: flex;
+  flex-direction: column;
+}
+.box-select {
+  border: none;
+  border-radius: 10px;
+  background-color: #eef2fd;
+  color: #a4c0ff;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(126, 126, 126, 0.1);
+}
+
+.box-select:focus {
+  outline: none;
+}
+
+.box-select option {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .visa-form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .form-group {
-  width: 100%;
+  width: 40%;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
@@ -44,4 +98,22 @@ label {
   margin-bottom: 8px;
   font-weight: 600;
   text-align: left;
+}
+
+.button-section {
+  align-items: start;
+}
+
+.submit-button {
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-3px);
 }

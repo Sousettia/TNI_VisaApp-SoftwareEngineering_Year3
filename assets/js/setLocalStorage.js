@@ -47,7 +47,7 @@ document.getElementById("UserData").addEventListener("submit", function (e) {
 
   // Store form data in localStorage
   localStorage.setItem("UserData", JSON.stringify(formData));
-  window.location.href = "/pages/login.html";
+  window.location.href = "/pages/newLogin.html";
 
   // Notify user
   alert("Application stored locally!");

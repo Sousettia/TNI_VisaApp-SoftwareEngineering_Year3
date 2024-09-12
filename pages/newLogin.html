@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/assets/css/loginplus.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container" id="main">
+      <div class="sign-up">
+        <form id="UserData" class="visa-form">
+          <h1>Create Account</h1>
+
+          <label for="idNumber"></label>
+          <input
+            type="text"
+            id="idNumber"
+            name="idNumber"
+            placeholder="ID Number / Passport"
+          />
+
+          <label for="firstname"></label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Firstname"
+          />
+
+          <label for="lastname"></label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            placeholder="Lastname"
+          />
+
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+
+          <div class="dob-group">
+            <label for="dob">Date of Birth</label>
+            <div class="dob-fields">
+              <label for="dobDay" class="visually-hidden"></label>
+              <select id="dobDay" name="dobDay">
+                <option value="">DD</option>
+              </select>
+
+              <label for="dobMonth" class="visually-hidden"></label>
+              <select id="dobMonth" name="dobMonth">
+                <option value="">MM</option>
+              </select>
+
+              <label for="dobYear" class="visually-hidden"></label>
+              <select id="dobYear" name="dobYear">
+                <option value="">YYYY</option>
+              </select>
+            </div>
+            <div class="gender-group">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            required
+          />
+
+          <label for="confirm-password"></label>
+          <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Confirm Password"
+            required
+          />
+
+          <button type="submit" class="submit-button" value="submit">
+            Sign Up
+          </button>
+        </form>
+      </div>
+      <div class="sign-in">
+        <form class="login-form margin-top3r">
+          <h1>Sign in</h1>
+          <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            class="input-field"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            class="input-field"
+            required
+          />
+          <a href="/pages/resetpw.html" class="text-button"">Forgot Password?</a>
+          <button type="submit" class="submit-button">Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-left">
+            <h1>Apply for Your Visa</h1>
+            <p>
+              Please log in with your credentials <br />
+              to continue the visa application process.
+            </p>
+            <button id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-right">
+            <h1>Login to Your Visa Application</h1>
+            <p>
+              Submit your personal details <br />
+              to start the visa application
+            </p>
+            <button id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+    <script src="/assets/js/loginValidation.js"></script>
+    <script src="/assets/js/setLocalStorage.js"></script>
+    <script src="/assets/js/dob.js"></script>
+    <script>
+      const signUpButton = document.getElementById("signUp");
+      const signInButton = document.getElementById("signIn");
+      const container = document.getElementById("main");
+
+      signUpButton.addEventListener("click", () => {
+        container.classList.add("right-panel-active");
+      });
+
+      signInButton.addEventListener("click", () => {
+        container.classList.remove("right-panel-active");
+      });
+    </script>
+  </body>
+</html>

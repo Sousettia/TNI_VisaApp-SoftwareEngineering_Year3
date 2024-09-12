@@ -1,8 +1,19 @@
+/* Base styles (ทั่วไป) */
 * {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  background-color: #a4c0ff;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
 .container {
-  width: 80%;
+  width: 100%;
   height: 80%;
   padding: 20px;
   display: flex;
@@ -10,29 +21,23 @@
   justify-content: center;
   align-items: center;
 }
-body {
-  background-color: #a4c0ff;
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  margin: 0;
-}
+
 .styled-main_logo {
-  width: 500px;
+  width: 200px;
   height: auto;
-  display: block;
 }
+
 .login-form {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 150%;
+  width: 100%;
   max-width: 300px;
 }
 
 .input-field {
-  width: 150%;
+  width: 100%;
   padding: 15px;
   font-size: 16px;
   margin-bottom: 10px;
@@ -41,7 +46,7 @@ body {
 }
 
 .submit-button {
-  width: 161%;
+  width: 110%;
   padding: 15px;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -52,9 +57,10 @@ body {
 }
 
 .submit-button:hover {
-  background-color: #92e5ff;
+  background-color: #9eb7f3;
   color: #ffffff;
 }
+
 .text-button {
   color: #ffffff;
   cursor: pointer;
@@ -80,6 +86,18 @@ body {
   margin-top: 3rem;
 }
 
+#question-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.question {
+  color: #ffffff;
+  margin-right: 1rem;
+}
+
 #main-logo {
   max-inline-size: 200px;
   inline-size: 100%;
@@ -91,3 +109,89 @@ body {
   margin-inline-end: auto;
   margin-block-start: 50px;
 }
+
+/* Responsive สำหรับหน้าจอขนาดเล็ก (มือถือ) */
+@media (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+
+  .styled-main_logo {
+    width: 150px;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 107%;
+  }
+  #question-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .question {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Responsive สำหรับหน้าจอขนาดกลาง (แท็บเล็ต) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    width: 80%;
+  }
+
+  .styled-main_logo {
+    width: 180px;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 108%;
+  }
+}
+
+/* Responsive สำหรับหน้าจอขนาดใหญ่ (เดสก์ท็อป)
+@media (min-width: 1025px) {
+  .container {
+    width: 50%;
+  }
+
+  .styled-main_logo {
+    width: 200px;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .input-field {
+    width: 100%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+} */

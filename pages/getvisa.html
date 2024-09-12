@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
+    <title>get visa</title>
     <link rel="stylesheet" href="/assets/css/dropdown.css" />
     <link rel="stylesheet" href="/assets/css/nav_profile.css" />
-    <link rel="stylesheet" href="/assets/css/getvisa.css">
+    <link rel="stylesheet" href="/assets/css/getvisa.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,30 +21,38 @@
   <body>
     <div id="navbar-container"></div>
     <div class="container">
-      <h1>Get Your Visa</h1>
-      <div class="visa-form">
+      <div class="head-section">
+        <h1 class="type-title">Get Your Visa</h1>
         <div class="form-group">
-          <label for="visaDropdown">Type of your VISA?</label>
-          <select id="visaDropdown">
-            <option value="" disabled selected>Select a Type</option>
-          </select>
+          <div class="type-select-section">
+            <label for="visaDropdown">Type of your VISA?</label>
+            <select class="box-select" id="visaDropdown">
+              <option value="" disabled selected>Select a Type</option>
+            </select>
+          </div>
         </div>
+      </div>
+      <div class="selection-container">
+        <div class="visa-form">
+          <div class="form-group">
+            <label for="countryDropdown">Where am I from?</label>
+            <select class="box-select" id="countryDropdown">
+              <option value="" disabled selected>Select a Country</option>
+            </select>
+          </div>
 
-        <div class="form-group">
-          <label for="countryDropdown">Where am I from?</label>
-          <select id="countryDropdown">
-            <option value="" disabled selected>Select a Country</option>
-          </select>
+          <div class="form-group">
+            <label for="destinationDropdown">Where am I going?</label>
+            <select class="box-select" id="destinationDropdown">
+              <option value="" disabled selected>Select a Country</option>
+            </select>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="destinationDropdown">Where am I going?</label>
-          <select id="destinationDropdown">
-            <option value="" disabled selected>Select a Country</option>
-          </select>
+        <div class="button-section">
+          <a href="/pages/visaform.html"
+            ><button type="submit" class="submit-button">Get Started</button></a
+          >
         </div>
-
-        <a href="/pages/visaform.html"><button type="submit" class="submit-button">Get Started</button></a>
       </div>
     </div>
 

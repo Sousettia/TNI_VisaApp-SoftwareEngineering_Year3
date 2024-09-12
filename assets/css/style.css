@@ -3,7 +3,12 @@
   margin: 0;
   font-family: "Open Sans", sans-serif;
 }
-
+body {
+  overflow-x: scroll;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 .container {
   background-color: #f3f3f3;
   overflow: hidden;

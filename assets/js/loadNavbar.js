@@ -33,7 +33,7 @@ function loadNavbar() {
           e.preventDefault(); // Prevent the default anchor behavior
           localStorage.removeItem("userLoggedIn");
           localStorage.removeItem("userName");
-          window.location.href = "login.html"; // Redirect to the login page
+          window.location.href = "newLogin.html"; // Redirect to the login page
         });
       }
 
@@ -50,15 +50,24 @@ function loadUserDetails() {
     const formData = JSON.parse(storedData);
 
     const elements = [
-      { id: "nav_nameDisplay", value: `${formData.firstname} ${formData.lastname}` },
-      { id: "p_nameDisplay", value: `${formData.firstname} ${formData.lastname}` },
+      {
+        id: "nav_nameDisplay",
+        value: `${formData.firstname} ${formData.lastname}`,
+      },
+      {
+        id: "p_nameDisplay",
+        value: `${formData.firstname} ${formData.lastname}`,
+      },
       { id: "p_id", value: `ID : ${formData.idNumber}` },
-      { id: "p_birth", value: `Birth Date : ${formData.dobDay}/${formData.dobMonth}/${formData.dobYear}` },
+      {
+        id: "p_birth",
+        value: `Birth Date : ${formData.dobDay}/${formData.dobMonth}/${formData.dobYear}`,
+      },
       { id: "p_gender", value: `Gender : ${formData.gender}` },
-      { id: "p_emailDisplay", value: `Email : ${formData.email}` }
+      { id: "p_emailDisplay", value: `Email : ${formData.email}` },
     ];
 
-    elements.forEach(element => {
+    elements.forEach((element) => {
       const el = document.getElementById(element.id);
       if (el) {
         el.textContent = element.value;
