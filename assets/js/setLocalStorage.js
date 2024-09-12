@@ -1,4 +1,4 @@
-document.getElementById("visaForm").addEventListener("submit", function (e) {
+document.getElementById("UserData").addEventListener("submit", function (e) {
   e.preventDefault();
 
   // Get form values
@@ -46,7 +46,7 @@ document.getElementById("visaForm").addEventListener("submit", function (e) {
   };
 
   // Store form data in localStorage
-  localStorage.setItem("visaForm", JSON.stringify(formData));
+  localStorage.setItem("UserData", JSON.stringify(formData));
   window.location.href = "/pages/login.html";
 
   // Notify user

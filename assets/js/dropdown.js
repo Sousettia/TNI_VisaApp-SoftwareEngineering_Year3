@@ -1,56 +1,36 @@
-// Populate Dropdowns with options from external data files
+// DROPDOWN || Get the select element -------------------------------------------------------------------------------------
+const visaDropdown = document.getElementById("visaDropdown");
+const countryDropdown = document.getElementById("countryDropdown");
+const destinationDropdown = document.getElementById("destinationDropdown");
+
+// Function to populate the dropdown with nationalities
 function populateDropdown() {
-  const countryDropdownContent = document.querySelector(
-    "#countryDropdown + .dropdown-content"
-  );
-  const visaDropdownContent = document.querySelector(
-    "#VisaDropdown + .dropdown-content"
-  );
-  const destinationDropdownContent = document.querySelector(
-    "#destinationDropdown + .dropdown-content"
-  );
+
+  visaTypes.forEach((visaType) => {
+    let option = document.createElement("option");
+    option.value = visaType;
+    option.textContent = visaType;
+    visaDropdown.appendChild(option);
+  });
 
   countries.forEach((country) => {
-    const a = document.createElement("a");
-    a.href = "#";
-    a.textContent = country;
-    a.onclick = () => selectOption("countryDropdown", country);
-    countryDropdownContent.appendChild(a);
-
-    const destA = a.cloneNode(true);
-    destA.onclick = () => selectOption("destinationDropdown", country);
-    destinationDropdownContent.appendChild(destA);
+    let option = document.createElement("option");
+    option.value = country;
+    option.textContent = country;
+    countryDropdown.appendChild(option);
   });
 
-  visaTypes.forEach((type) => {
-    const a = document.createElement("a");
-    a.href = "#";
-    a.textContent = type;
-    a.onclick = () => selectOption("VisaDropdown", type);
-    visaDropdownContent.appendChild(a);
+  countries.forEach((destination) => {
+    let option = document.createElement("option");
+    option.value = destination;
+    option.textContent = destination;
+    destinationDropdown.appendChild(option);
   });
 }
 
-function selectOption(buttonId, option) {
-  document.getElementById(
-    buttonId
-  ).innerHTML = `${option} <i class="fa-solid fa-caret-down"></i>`;
-  closeDropdowns();
-}
+// Call the function to populate the dropdown
+populateDropdown();
 
-function closeDropdowns() {
-  const dropdowns = document.querySelectorAll(".dropdown-content");
-  dropdowns.forEach((dropdown) => (dropdown.style.display = "none"));
-}
-
-document.querySelectorAll(".dropbtn").forEach((button) => {
-  button.addEventListener("click", () => {
-    const dropdownContent = button.nextElementSibling;
-    const isVisible = dropdownContent.style.display === "block";
-    closeDropdowns();
-    dropdownContent.style.display = isVisible ? "none" : "block";
-  });
-});
 
 window.onload = populateDropdown;
 

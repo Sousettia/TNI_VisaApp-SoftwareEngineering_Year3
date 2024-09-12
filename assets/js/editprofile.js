@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Retrieve existing data from localStorage
-    const existingData = JSON.parse(localStorage.getItem("visaForm")) || {};
+    const existingData = JSON.parse(localStorage.getItem("UserData")) || {};
   
     // Populate form fields with existing data
     if (existingData.firstname)
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
   
     // Retrieve existing data from localStorage
-    const existingData = JSON.parse(localStorage.getItem("visaForm")) || {};
+    const existingData = JSON.parse(localStorage.getItem("UserData")) || {};
   
     // Get form values
     const firstname = document.getElementById("firstname").value;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (gender) existingData.gender = gender;
   
     // Save updated data back to localStorage
-    localStorage.setItem("visaForm", JSON.stringify(existingData));
+    localStorage.setItem("UserData", JSON.stringify(existingData));
   
     // Notify user
     alert("Profile updated successfully!");
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
   document.getElementById("deleteAccountBtn").addEventListener("click", function() {
     // Clear localStorage
-    localStorage.removeItem("visaForm");
+    localStorage.removeItem("UserData");
   
     // Notify user
     alert("Account deleted successfully!");

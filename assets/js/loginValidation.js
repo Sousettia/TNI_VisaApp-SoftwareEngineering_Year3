@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Check localStorage for stored user credentials
-      const storedData = JSON.parse(localStorage.getItem("visaForm"));
+      const storedData = JSON.parse(localStorage.getItem("UserData"));
 
       if (storedData) {
         if (username === storedData.email && password === storedData.password) {
@@ -47,7 +47,7 @@ document
   .getElementById("deleteAccountBtn")
   .addEventListener("click", function () {
     // Clear localStorage
-    localStorage.removeItem("visaForm");
+    localStorage.removeItem("UserData");
     localStorage.removeItem("userLoggedIn");
     localStorage.removeItem("userName");
 

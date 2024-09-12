@@ -3,42 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const monthSelect = document.getElementById("dobMonth");
   const yearSelect = document.getElementById("dobYear");
 
-  // Populate day dropdown (1-31)
-  for (let i = 1; i <= 31; i++) {
-    const option = document.createElement("option");
-    option.value = i;
-    option.textContent = i;
-    daySelect.appendChild(option);
+  // Helper function to populate a select element
+  function populateSelect(selectElement, start, end, displayValues = null) {
+    for (let i = start; i <= end; i++) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.textContent = displayValues ? displayValues[i - start] : i;
+      selectElement.appendChild(option);
+    }
   }
 
-  // Populate month dropdown (1-12)
+  // Populate day (1-31)
+  populateSelect(daySelect, 1, 31);
+  // Populate month (1-12)
   const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
   ];
-  for (let i = 1; i <= 12; i++) {
-    const option = document.createElement("option");
-    option.value = i;
-    option.textContent = months[i - 1];
-    monthSelect.appendChild(option);
-  }
-
-  // Populate year dropdown (from current year to 100 years back)
+  populateSelect(monthSelect, 1, 12, months);
+  // Populate year (current year to 100 years back)
   const currentYear = new Date().getFullYear();
-  for (let i = 0; i <= 100; i++) {
-    const option = document.createElement("option");
-    option.value = currentYear - i;
-    option.textContent = currentYear - i;
-    yearSelect.appendChild(option);
-  }
+  populateSelect(yearSelect, currentYear - 100, currentYear);
 });

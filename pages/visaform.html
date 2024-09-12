@@ -4,19 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visa Application Form</title>
-    <link rel="stylesheet" href="/assets/css/navbar.css" />
     <link rel="stylesheet" href="/assets/css/form.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        font-family: "Roboto", sans-serif;
-      }
-    </style>
+    <script
+      src="https://kit.fontawesome.com/8036d41456.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -40,7 +32,12 @@
         </div>
         <div class="form-group">
           <label for="firstname">Name</label>
-          <input type="text" id="firstname" name="firstname" placeholder="Firstname" />
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            placeholder="Firstname"
+          />
         </div>
         <div class="form-group">
           <label for="lastname">Lastname</label>
@@ -54,11 +51,23 @@
         <div class="form-group dob-group">
           <label for="dob">Date of Birth</label>
           <div class="dob-fields">
-            <input type="text" id="dobDay" name="dobDay" placeholder="DD" />
-            <input type="text" id="dobMonth" name="dobMonth" placeholder="MM" />
-            <input type="text" id="dobYear" name="dobYear" placeholder="YYYY" />
+            <label for="dobDay" class="visually-hidden">Day</label>
+            <select id="dobDay" name="dobDay">
+              <option value="">DD</option>
+            </select>
+
+            <label for="dobMonth" class="visually-hidden">Month</label>
+            <select id="dobMonth" name="dobMonth">
+              <option value="">MM</option>
+            </select>
+
+            <label for="dobYear" class="visually-hidden">Year</label>
+            <select id="dobYear" name="dobYear">
+              <option value="">YYYY</option>
+            </select>
           </div>
         </div>
+
         <div class="form-group">
           <label for="gender">Gender</label>
           <select id="gender" name="gender">
@@ -80,13 +89,14 @@
             placeholder="Phone Number"
           />
         </div>
+
         <div class="form-group">
-          <label for="nationality">Nationality</label>
-          <select id="nationality" name="nationality">
-            <option value="">Select</option>
-            <!-- Populate with countries -->
+          <label for="nationalities">Select Nationality:</label>
+          <select id="nationalities">
+            <option value="" disabled selected>Select a Nationality</option>
           </select>
         </div>
+
         <div class="form-group">
           <label for="address">Address</label>
           <input
@@ -97,13 +107,22 @@
           />
         </div>
         <div class="form-buttons">
-          <button type="button" class="btn btn-secondary">
+          <button type="button" id="useProfileButton" class="btn btn-secondary">
             Use My Profile
           </button>
-          <button type="submit" class="btn btn-primary">Save</button>
-          <button type="button" class="btn btn-secondary">Confirm</button>
+          <div class="btn-box">
+            <button type="button" id="saveButton" class="btn btn-primary">
+              Save
+            </button>
+            <button type="button" id="confirmButton" class="btn btn-secondary">
+              Confirm
+            </button>
+          </div>
         </div>
       </form>
     </div>
+    <script src="/assets/js/array.js"></script>
+    <script src="/assets/js/visaform.js"></script>
+    <script src="/assets/js/dob.js"></script>
   </body>
 </html>

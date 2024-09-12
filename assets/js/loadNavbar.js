@@ -45,7 +45,7 @@ function loadNavbar() {
 
 // Function to load user details
 function loadUserDetails() {
-  const storedData = localStorage.getItem("visaForm");
+  const storedData = localStorage.getItem("UserData");
   if (storedData) {
     const formData = JSON.parse(storedData);
 
@@ -67,7 +67,7 @@ function loadUserDetails() {
       }
     });
   } else {
-    console.error("No data found in localStorage with key 'visaForm'");
+    console.error("No data found in localStorage with key 'UserData'");
   }
 }
 

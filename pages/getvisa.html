@@ -24,41 +24,31 @@
       <h1>Get Your Visa</h1>
       <div class="visa-form">
         <div class="form-group">
-          <label for="VisaDropdown">Type of your VISA?</label>
-          <div class="dropdown">
-            <button class="dropbtn" id="VisaDropdown">
-              Select Type <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content"></div>
-          </div>
+          <label for="visaDropdown">Type of your VISA?</label>
+          <select id="visaDropdown">
+            <option value="" disabled selected>Select a Type</option>
+          </select>
         </div>
 
         <div class="form-group">
           <label for="countryDropdown">Where am I from?</label>
-          <div class="dropdown">
-            <button class="dropbtn" id="countryDropdown">
-              Select Country <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content"></div>
-          </div>
+          <select id="countryDropdown">
+            <option value="" disabled selected>Select a Country</option>
+          </select>
         </div>
 
         <div class="form-group">
           <label for="destinationDropdown">Where am I going?</label>
-          <div class="dropdown">
-            <button class="dropbtn" id="destinationDropdown">
-              Select Destination <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content"></div>
-          </div>
+          <select id="destinationDropdown">
+            <option value="" disabled selected>Select a Country</option>
+          </select>
         </div>
 
         <a href="/pages/visaform.html"><button type="submit" class="submit-button">Get Started</button></a>
       </div>
     </div>
 
-    <script src="/assets/js/countries.js"></script>
-    <script src="/assets/js/visaTypes.js"></script>
+    <script src="/assets/js/array.js"></script>
     <script src="/assets/js/dropdown.js"></script>
     <script src="/assets/js/loginValidation.js"></script>
     <script src="/assets/js/loadNavbar.js"></script>

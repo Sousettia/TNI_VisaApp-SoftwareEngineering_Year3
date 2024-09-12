@@ -20,7 +20,7 @@ function validatePasswords() {
 let otp_val; // Declare otp_val in a broader scope for access during validation
 
 function sendOTP() {
-  const storedData = JSON.parse(localStorage.getItem("visaForm"));
+  const storedData = JSON.parse(localStorage.getItem("UserData"));
   const email = storedData.email;
   const otpverify = document.getElementsByClassName("otpverify")[0];
 
@@ -82,10 +82,10 @@ document
     }
 
     if (validatePasswords()) {
-      const storedData = JSON.parse(localStorage.getItem("visaForm")) || {};
+      const storedData = JSON.parse(localStorage.getItem("UserData")) || {};
       const passwordInput = document.getElementById("password").value;
       if (passwordInput) storedData.password = passwordInput;
-      localStorage.setItem("visaForm", JSON.stringify(storedData));
+      localStorage.setItem("UserData", JSON.stringify(storedData));
       alert("Password changed successfully!");
       localStorage.removeItem("otpVerified");
       window.location.href = "login.html";
