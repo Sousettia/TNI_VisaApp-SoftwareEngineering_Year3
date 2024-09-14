@@ -110,6 +110,7 @@ body {
   margin-block-start: 50px;
 }
 
+
 /* Responsive สำหรับหน้าจอขนาดเล็ก (มือถือ) */
 @media (max-width: 600px) {
   .container {

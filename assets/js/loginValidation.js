@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document
-  .getElementById("deleteAccountBtn")
-  .addEventListener("click", function () {
+const deleteBtn = document.getElementById("deleteAccountBtn");
+if (deleteBtn) {
+  deleteBtn.addEventListener("click", function () {
     // Clear localStorage
     localStorage.removeItem("UserData");
     localStorage.removeItem("userLoggedIn");
@@ -54,3 +54,5 @@ document
     // Notify user
     alert("Account deleted successfully!");
   });
+}
+
