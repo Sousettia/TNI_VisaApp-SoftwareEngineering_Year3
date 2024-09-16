@@ -13,63 +13,74 @@
   </head>
   <body>
     <div class="container">
-      <div class="head-box">
-        <div class="back-button">
-          <a href="#" onclick="window.history.back(); return false;"
-            >&#x3c; Back</a
-          >
+      <div class="left">
+        <div class="head-box">
+          <div class="back-button">
+            <a href="#" onclick="window.history.back(); return false;"
+              >&#x3c; Back</a
+            >
+          </div>
+          <div class="vis-box"></div>
         </div>
-        <div class="vis-box"></div>
+        <div class="reset-container">
+          <h2>Reset Password</h2>
+          <div class="head-reset-box">
+            <div class="otpverify" style="display: block">
+              <input
+                type="text"
+                name="otp"
+                id="otp_inp"
+                placeholder="Enter OTP"
+                required
+              />
+            </div>
+            <div class="virifybtn">
+              <button class="vir-btn" id="otp-btn">Verify</button>
+            </div>
+          </div>
+          <div class="body-reset-box">
+            <button type="button" class="send-btn" onclick="sendOTP()">
+              Send OTP
+            </button>
+            <form>
+              <div class="input-container mt-4">
+                <input
+                  type="password"
+                  name="new-password"
+                  id="password"
+                  placeholder="New Password"
+                  required
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  placeholder="Confirm Password"
+                  required
+                />
+              </div>
+              <button type="submit" class="login-button">
+                Change Password
+              </button>
+            </form>
+          </div>
+          <p class="register-prompt mt-3">
+            Not a member?
+            <strong
+              ><a href="/pages/newLogin.html" class="text-button"
+                >Register now</a
+              ></strong
+            >
+          </p>
+        </div>
       </div>
-      <div class="reset-container">
-        <h2>Reset Password</h2>
-        <div class="head-reset-box">
-          <div class="otpverify" style="display: block">
-            <input
-              type="text"
-              name="otp"
-              id="otp_inp"
-              placeholder="Enter OTP"
-              required
-            />
-          </div>
-          <div class="virifybtn">
-            <button class="vir-btn" id="otp-btn">Verify</button>
-          </div>
-        </div>
-        <div class="body-reset-box">
-          <button type="button" class="send-btn" onclick="sendOTP()">
-            Send OTP
-          </button>
-          <form>
-            <div class="input-container mt-4">
-              <input
-                type="password"
-                name="new-password"
-                id="password"
-                placeholder="New Password"
-                required
-              />
-            </div>
-            <div class="input-container">
-              <input
-                type="password"
-                name="confirm-password"
-                id="confirm-password"
-                placeholder="Confirm Password"
-                required
-              />
-            </div>
-            <button type="submit" class="login-button">Change Password</button>
-          </form>
-        </div>
-        <p class="register-prompt mt-3">
-          Not a member?
-          <strong
-            ><a href="/pages/newLogin.html" class="text-button"
-              >Register now</a
-            ></strong
-          >
+      <div class="right">
+        <img src="/assets/image/Logo_w.png" alt="" />
+        <p>
+          Create your new password <br />
+          And Get Started!
         </p>
       </div>
     </div>

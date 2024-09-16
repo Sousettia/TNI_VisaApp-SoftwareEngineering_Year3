@@ -1,72 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visa Form</title>
-    <link rel="stylesheet" href="/assets/css/download.css">
+    <link rel="stylesheet" href="/assets/css/download.css" />
+    <link rel="stylesheet" href="/assets/css/popup.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-</head>
-<body>
-    <div class="container">
-        <div class="form-section">
-            <a href="#" class="back-link">&lt; Back</a>
-            <div class="logo-placeholder">
-                <img src="/assets/image/Logo.png" alt="Visa WR Logo">
-            </div>
-            <form id="visa-form">
-                <div class="input-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                </div>
-                <div class="input-group">
-                    <label for="id-number">ID Number</label>
-                    <input type="text" id="id-number" name="id-number" placeholder="ID Number">
-                </div>
-                <div class="form-group dob-group">
-                    <label for="dob">Date of Birth</label>
-                    <div class="dob-fields">
-                      <input type="text" id="dobDay" name="dobDay" placeholder="DD" />
-                      <input type="text" id="dobMonth" name="dobMonth" placeholder="MM" />
-                      <input type="text" id="dobYear" name="dobYear" placeholder="YYYY" />
-                    </div>
-                  </div>
-                <div class="input-group mt-2">
-                    <label for="nationality">Nationality</label>
-                    <input type="text" id="nationality" name="nationality" placeholder="Nationality">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Email">
-                </div>
-                <div class="input-group">
-                    <label for="address">Address</label>
-                    <textarea id="address" name="address" placeholder="Address"></textarea>
-                </div>
-                <div class="input-group">
-                    <label for="tel">Tel</label>
-                    <input type="text" id="tel" name="tel" placeholder="Tel">
-                </div>
-            </form>
-        </div>
-
-        <div class="file-section">
-            <h3>ALL FILE</h3>
-            <ul class="file-list">
-                <li>Untitled Visa <span class="file-time">Seconds ago</span></li>
-                <li>Untitled Visa 2 <span class="file-time">2 Days ago</span></li>
-                <li>Untitled Visa 3 <span class="file-time">6 Weeks ago</span></li>
-                <li>Untitled Visa 4 <span class="file-time">1 Year ago</span></li>
-            </ul>
-            <div class="buttons">
-                <button class="edit-button">Edit</button>
-                <button class="pdf-button">Save to PDF</button>
-            </div>
-        </div>
+  </head>
+  <body>
+    <div class="popup" id="popup">
+      <img src="/assets/image/tick.png" />
+      <h2>
+        Save this file <br />
+        to PDF?
+      </h2>
+      <div class="btn-section">
+        <button class="p-submit-btn-1" onclick="">Yes</button>
+        <button class="p-submit-btn-2" onclick="closePopup()">No</button>
+      </div>
     </div>
+    <div class="container">
+      <div class="form-section">
+        <div class="back-button">
+          <a href="#" onclick="window.history.back(); return false;"
+            >&#x3c; Back</a
+          >
+        </div>
+        <div class="logo-placeholder">
+          <img src="/assets/image/Logo.png" alt="Visa WR Logo" />
+        </div>
+        <form id="visa-form">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Name" />
+          </div>
+          <div class="input-group">
+            <label for="id-number">ID Number</label>
+            <input
+              type="text"
+              id="id-number"
+              name="id-number"
+              placeholder="ID Number"
+            />
+          </div>
+          <div class="form-group dob-group">
+            <label for="dob">Date of Birth</label>
+            <div class="dob-fields">
+              <input type="text" id="dobDay" name="dobDay" placeholder="DD" />
+              <input
+                type="text"
+                id="dobMonth"
+                name="dobMonth"
+                placeholder="MM"
+              />
+              <input
+                type="text"
+                id="dobYear"
+                name="dobYear"
+                placeholder="YYYY"
+              />
+            </div>
+          </div>
+          <div class="input-group mt-2">
+            <label for="nationality">Nationality</label>
+            <input
+              type="text"
+              id="nationality"
+              name="nationality"
+              placeholder="Nationality"
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" />
+          </div>
+          <div class="input-group">
+            <label for="address">Address</label>
+            <textarea
+              id="address"
+              name="address"
+              placeholder="Address"
+            ></textarea>
+          </div>
+          <div class="input-group">
+            <label for="tel">Tel</label>
+            <input type="text" id="tel" name="tel" placeholder="Tel" />
+          </div>
+        </form>
+      </div>
+
+      <div class="file-section">
+        <h3>ALL FILE</h3>
+        <ul class="file-list">
+          <li>Untitled Visa <span class="file-time">Seconds ago</span></li>
+          <li>Untitled Visa 2 <span class="file-time">2 Days ago</span></li>
+          <li>Untitled Visa 3 <span class="file-time">6 Weeks ago</span></li>
+          <li>Untitled Visa 4 <span class="file-time">1 Year ago</span></li>
+        </ul>
+        <div class="buttons">
+          <button class="edit-button">Edit</button>
+          <button class="pdf-button" onclick="openPopup()">Save to PDF</button>
+        </div>
+      </div>
+    </div>
+    <script src="/assets/js/popup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>

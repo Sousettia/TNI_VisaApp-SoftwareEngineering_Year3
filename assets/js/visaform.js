@@ -33,9 +33,9 @@ function useProfileData() {
   // Logic to use profile data
 }
 
-function confirmFormData() {
-  window.location.href = "/pages/download.html";
-}
+// function confirmFormData() {
+//   window.location.href = "/pages/download.html";
+// }
 
 // DROPDOWN || Get the select element -------------------------------------------------------------------------------------
 const selectElement = document.getElementById("nationalities");

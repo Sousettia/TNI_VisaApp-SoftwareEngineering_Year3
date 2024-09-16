@@ -5,12 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visa Application Form</title>
     <link rel="stylesheet" href="/assets/css/form.css" />
+    <link rel="stylesheet" href="/assets/css/popup.css">
     <script
       src="https://kit.fontawesome.com/8036d41456.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
+    <div class="popup" id="popup">
+      <img src="/assets/image/tick.png" />
+      <h2>
+        Do you have Stable <br />
+        Statement?
+      </h2>
+      <div class="btn-section">
+        <button class="p-submit-btn-1" onclick="goDownload()">Yes</button>
+        <button class="p-submit-btn-2" onclick="">No</button>
+      </div>
+    </div>
     <div class="container">
       <div class="back-button">
         <a href="#" onclick="window.history.back(); return false;"
@@ -136,6 +148,7 @@
                   type="button"
                   id="confirmButton"
                   class="btn btn-secondary"
+                  onclick="openPopup()"
                 >
                   Confirm
                 </button>
@@ -145,6 +158,7 @@
         </div>
       </div>
     </div>
+    <script src="/assets/js/popup.js""></script>
     <script src="/assets/js/array.js"></script>
     <script src="/assets/js/visaform.js"></script>
     <script src="/assets/js/dob.js"></script>
