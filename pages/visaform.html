@@ -5,11 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Visa Application Form</title>
     <link rel="stylesheet" href="/assets/css/form.css" />
-    <link rel="stylesheet" href="/assets/css/popup.css">
+    <link rel="stylesheet" href="/assets/css/popup.css" />
     <script
       src="https://kit.fontawesome.com/8036d41456.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      /* The Modal (background) */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Black background with opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+        max-width: 600px;
+        border-radius: 8px;
+      }
+
+      /* Close button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Buttons */
+      .modal-content .btn {
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="popup" id="popup">
@@ -112,10 +161,10 @@
 
             <div class="form-group">
               <div class="nation-group">
-                <label for="nationalities" class="form-group-label"
+                <label for="select_nationalities" class="form-group-label"
                   >Nationality</label
                 >
-                <select id="nationalities" class="nation">
+                <select id="select_nationalities" class="nation">
                   <option value="" disabled selected>
                     Select a Nationality
                   </option>
@@ -137,9 +186,33 @@
                 type="button"
                 id="useProfileButton"
                 class="btn btn-secondary"
+                onclick="showProfilePopup()"
               >
                 Use My Profile
               </button>
+              <div id="profileModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <h2>Use My Profile</h2>
+                  <div id="profileContent">
+                    <!-- Profile data will be inserted here -->
+                  </div>
+                  <button
+                    type="button"
+                    id="confirmProfile"
+                    class="btn btn-primary"
+                  >
+                    Confirm
+                  </button>
+                  <button
+                    type="button"
+                    id="cancelProfile"
+                    class="btn btn-secondary"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
               <div class="btn-box">
                 <button type="button" id="saveButton" class="btn btn-primary">
                   Save
@@ -158,7 +231,6 @@
         </div>
       </div>
     </div>
-    <script src="/assets/js/popup.js""></script>
     <script src="/assets/js/array.js"></script>
     <script src="/assets/js/visaform.js"></script>
     <script src="/assets/js/dob.js"></script>

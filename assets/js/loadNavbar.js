@@ -71,8 +71,6 @@ function loadUserDetails() {
       const el = document.getElementById(element.id);
       if (el) {
         el.textContent = element.value;
-      } else {
-        console.error(`Element with ID '${element.id}' not found`);
       }
     });
   } else {
