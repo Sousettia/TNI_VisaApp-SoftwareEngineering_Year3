@@ -37,7 +37,13 @@ function getFormData() {
     phone: document.getElementById("phone").value,
     nationality: document.getElementById("select_nationalities").value,
     address: document.getElementById("address").value,
+    timestamp: new Date().getTime()  // Add current time as timestamp
   };
+}
+// Start the timer and save the start time to localStorage
+function startTimer() {
+  const currentTime = new Date().getTime();
+  localStorage.setItem("startTime", currentTime);
 }
 
 // Validate form data
