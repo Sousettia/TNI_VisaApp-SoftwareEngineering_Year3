@@ -68,16 +68,18 @@
         Statement?
       </h2>
       <div class="btn-section">
+        <i class="fa-solid fa-xmark" onclick="closePopup()"></i>
         <button class="p-submit-btn-1" onclick="goDownload()">Yes</button>
         <button class="p-submit-btn-2" onclick="">No</button>
       </div>
     </div>
+
+    <div class="back-button">
+      <a href="#" onclick="window.history.back(); return false;">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+    </div>
     <div class="container">
-      <div class="back-button">
-        <a href="#" onclick="window.history.back(); return false;"
-          >&#x3c; Back</a
-        >
-      </div>
       <div class="subcontainer">
         <div class="form-container">
           <div class="form-logo">
@@ -114,7 +116,7 @@
             <div class="form-group dob-group">
               <div class="dob-box">
                 <div class="dob-fields">
-                  <label for="dob">Date of Birth</label>
+                  <label for="dob" class="dob-label-text">Date of Birth</label>
                   <div class="dob-fields-box">
                     <label for="dobDay" class="visually-hidden"></label>
                     <select id="dobDay" name="dobDay">
@@ -235,5 +237,9 @@
     <script src="/assets/js/array.js"></script>
     <script src="/assets/js/visaform.js"></script>
     <script src="/assets/js/dob.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8036d41456.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

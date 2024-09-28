@@ -1,0 +1,54 @@
+<button class="menu-toggle">
+  <i class="fa fa-bars"></i>
+</button>
+
+<nav class="navbar">
+  <a href="index.html"
+    ><img src="/assets/image/Logo_w.png" alt="logo" class="navbar-logo"
+  /></a>
+  <ul class="navbar-list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#about">About us</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+    <li>
+      <a href="newLogin.html" class="login-button" style="display: block"
+        >Login</a
+      >
+    </li>
+  </ul>
+
+  <div class="profile-dropdown" style="display: none">
+    <div class="profile-dropdown-btn">
+      <div class="profile-img">
+        <i class="fa-solid fa-circle"></i>
+      </div>
+      <span>
+        <span id="user_nameDisplay" class="user_display"></span>
+        <!-- Motonori -->
+        <i class="fa-solid fa-angle-down"></i>
+      </span>
+    </div>
+
+    <ul class="profile-dropdown-list">
+      <li class="profile-dropdown-list-item">
+        <a href="editprofile.html">
+          <i class="fa-regular fa-user"> </i>
+          Edit Profile
+        </a>
+      </li>
+      <li class="profile-dropdown-list-item">
+        <a href="download.html">
+          <i class="fa-regular fa-file"></i>
+          View Form
+        </a>
+      </li>
+      <hr />
+      <li class="profile-dropdown-list-item">
+        <a href="newLogin.html" class="logout-button">
+          <i class="fa-solid fa-arrow-right-from-bracket"> </i>
+          Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

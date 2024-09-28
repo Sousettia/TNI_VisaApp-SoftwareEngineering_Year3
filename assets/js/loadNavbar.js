@@ -1,20 +1,29 @@
 // Function to load the navbar
 function loadNavbar() {
-  fetch("navbar.html")
+  fetch("newnavbar.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("navbar-container").innerHTML = data;
 
       // Attach event listeners or any additional JS for the navbar here
-      const userPic = document.querySelector(".user-pic");
-      const subMenu = document.getElementById("subMenu");
+      const userPic = document.querySelector(".profile-dropdown");
+      const subMenu = document.querySelector(".profile-dropdown-list");
+      const btn = document.querySelector(".profile-dropdown-btn");
       const loginButton = document.querySelector(".login-button");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbar = document.querySelector(".navbar");
 
       if (userPic) {
         userPic.addEventListener("click", () => {
           console.log("Menu toggled");
           subMenu.classList.toggle("open-menu");
         });
+
+        if (menuToggle && navbar) {
+          menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("open");
+          });
+        }
 
         const isLoggedIn = localStorage.getItem("userLoggedIn"); // Check if user is logged in
         if (isLoggedIn) {
@@ -55,6 +64,10 @@ function loadUserDetails() {
         value: `${formData.firstname} ${formData.lastname}`,
       },
       {
+        id: "user_nameDisplay",
+        value: `${formData.firstname}`,
+      },
+      {
         id: "p_nameDisplay",
         value: `${formData.firstname} ${formData.lastname}`,
       },
@@ -81,5 +94,4 @@ function loadUserDetails() {
 // Run when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
   loadNavbar();
-  loadUserDetails(); // Load user details on page load for profile
 });

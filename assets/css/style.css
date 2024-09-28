@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 body {
   overflow-x: scroll;
@@ -246,6 +247,25 @@ body::-webkit-scrollbar {
 
 .bottomSm {
   display: none;
+}
+
+.bottom {
+  background-color: #a4c0ff;
+  color: white;
+}
+
+.desc {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  font-size: 12px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1024px) {

@@ -17,6 +17,17 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.btn-section i {
+  cursor: pointer;
+  position: absolute;
+  top: 4%;
+  right: 5%;
+}
+
+.btn-section i:hover {
+  transform: scale(1.1);
+}
+
 .open-popup {
   visibility: visible;
   top: 50%;
