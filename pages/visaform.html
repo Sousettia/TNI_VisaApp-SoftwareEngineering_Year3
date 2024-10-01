@@ -16,10 +16,10 @@
         display: none; /* Hidden by default */
         position: fixed;
         z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        inline-size: 100%; /* Full width */
+        block-size: 100%; /* Full height */
         background-color: rgba(
           0,
           0,
@@ -34,8 +34,8 @@
         margin: 15% auto;
         padding: 20px;
         border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-        max-width: 600px;
+        inline-size: 80%; /* Could be more or less, depending on screen size */
+        max-inline-size: 600px;
         border-radius: 8px;
       }
 
@@ -56,7 +56,7 @@
 
       /* Buttons */
       .modal-content .btn {
-        margin-right: 10px;
+        margin-inline-end: 10px;
       }
     </style>
   </head>
