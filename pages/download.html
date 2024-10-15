@@ -12,17 +12,6 @@
     />
   </head>
   <body>
-    <div class="popup" id="popup">
-      <img src="/assets/image/tick.png" />
-      <h2>
-        Save this file <br />
-        to PDF?
-      </h2>
-      <div class="btn-section">
-        <button class="p-submit-btn-1" onclick="">Yes</button>
-        <button class="p-submit-btn-2" onclick="closePopup()">No</button>
-      </div>
-    </div>
     <div class="container">
       <div class="back-button">
         <a href="#" onclick="window.history.back(); return false;"
@@ -98,6 +87,17 @@
         <div class="buttons">
           <button class="pdf-button" onclick="openPopup()">Save to PDF</button>
         </div>
+      </div>
+    </div>
+    <div class="popup" id="popup">
+      <img src="/assets/image/tick.png" />
+      <h2>
+        Save this file <br />
+        to PDF?
+      </h2>
+      <div class="btn-section">
+        <button class="p-submit-btn-1" onclick="downloadFile()">Yes</button>
+        <button class="p-submit-btn-2" onclick="closePopup()">No</button>
       </div>
     </div>
     <script src="/assets/js/popup.js"></script>

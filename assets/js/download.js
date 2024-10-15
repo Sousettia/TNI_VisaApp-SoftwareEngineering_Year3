@@ -80,6 +80,14 @@ function getElapsedTime() {
   }
 }
 
+function downloadFile() {
+  const fileUrl = "/assets/download/VisaExample.pdf";
+  const link = document.createElement("a");
+  link.href = fileUrl;
+  link.download = "VisaExample.pdf"; 
+  link.click();
+}
+
 // Populate the file list when the page loads
 document.addEventListener("DOMContentLoaded", () => {
   populateFileList();
