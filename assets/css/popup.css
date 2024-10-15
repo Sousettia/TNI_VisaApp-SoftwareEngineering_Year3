@@ -34,7 +34,18 @@
   transform: translate(-50%, -50%) scale(1);
 }
 
-.popup img {
+.open-SecondPopup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#SecondPopupImg{
+  width: auto;
+  height: 600px;
+}
+
+#popup img {
   width: 100px;
   margin-top: -50px;
   border-radius: 50%;

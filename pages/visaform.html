@@ -61,19 +61,6 @@
     </style>
   </head>
   <body>
-    <div class="popup" id="popup">
-      <img src="/assets/image/tick.png" />
-      <h2>
-        Do you have Stable <br />
-        Statement?
-      </h2>
-      <div class="btn-section">
-        <i class="fa-solid fa-xmark" onclick="closePopup()"></i>
-        <button class="p-submit-btn-1" onclick="goDownload()">Yes</button>
-        <button class="p-submit-btn-2" onclick="">No</button>
-      </div>
-    </div>
-
     <div class="back-button">
       <a href="#" onclick="window.history.back(); return false;">
         <i class="fas fa-arrow-left"></i> Back
@@ -233,6 +220,30 @@
         </div>
       </div>
     </div>
+
+    <div class="popup" id="popup">
+      <img src="/assets/image/tick.png" />
+      <h2>
+        Do you have Stable <br />
+        Statement?
+      </h2>
+      <div class="btn-section">
+        <i class="fa-solid fa-xmark" onclick="closePopup()"></i>
+        <button class="p-submit-btn-1" onclick="goDownload()">Yes</button>
+        <button class="p-submit-btn-2" onclick="handleSchengen()">No</button>
+      </div>
+    </div>
+
+    <div class="popup" id="SecondPopup">
+      <h3>This is Example of Schengen</h3>
+      <h4>In case that you don't have stable statement</h4>
+      <img id="SecondPopupImg" src="/assets/image/example_format.png" />
+      <div class="btn-section">
+        <i class="fa-solid fa-xmark" onclick="handleCloseSchengen()"></i>
+        <button class="p-submit-btn-1" onclick="goDownload()">Next</button>
+      </div>
+    </div>
+
     <script src="/assets/js/popup.js"></script>
     <script src="/assets/js/array.js"></script>
     <script src="/assets/js/visaform.js"></script>
