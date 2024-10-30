@@ -69,9 +69,7 @@ function getElapsedTime() {
       const elapsedTime = currentTime - startTime;
       const elapsedSeconds = Math.floor(elapsedTime / 1000);
       const elapsedMinutes = Math.floor(elapsedSeconds / 60);
-      return `${elapsedMinutes} minutes and ${
-        elapsedSeconds % 60
-      } seconds ago`;
+      return `${elapsedMinutes} minutes and ${elapsedSeconds % 60} seconds ago`;
     } else {
       return "No timestamp found.";
     }
@@ -81,10 +79,20 @@ function getElapsedTime() {
 }
 
 function downloadFile() {
-  const fileUrl = "/assets/download/VisaExample.pdf";
+  // Check the Schengen status from localStorage
+  const needsSchengen = localStorage.getItem("needsSchengen");
+
+  // Define different file paths based on Schengen status
+  console.log(needsSchengen);
+  const fileUrl = needsSchengen
+    ? "/assets/download/Schengen.pdf"
+    : "/assets/download/VisaExample.pdf";
+  console.log(fileUrl);
+  const fileName = needsSchengen ? "Schengen.pdf" : "VisaExample.pdf";
+
   const link = document.createElement("a");
   link.href = fileUrl;
-  link.download = "VisaExample.pdf"; 
+  link.download = fileName;
   link.click();
 }
 

@@ -12,7 +12,8 @@
     "axe/name-role-value": [
       "default",
       {
-        "link-name": "off"
+        "link-name": "off",
+        "button-name": "off"
       }
     ],
     "no-inline-styles": "off",
@@ -23,5 +24,10 @@
         "select-name": "off"
       }
     ]
-  }
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not samsung <= 25"
+  ]
 }

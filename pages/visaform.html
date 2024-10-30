@@ -210,7 +210,6 @@
                   type="button"
                   id="confirmButton"
                   class="btn btn-secondary"
-                  onclick="openPopup()"
                 >
                   Confirm
                 </button>
@@ -237,13 +236,17 @@
     <div class="popup" id="SecondPopup">
       <h3>This is Example of Schengen</h3>
       <h4>In case that you don't have stable statement</h4>
-      <img id="SecondPopupImg" src="/assets/image/example_format.png" />
+      <img id="SecondPopupImg" src="/assets/image/Schengen.jpg" />
       <div class="btn-section">
         <i class="fa-solid fa-xmark" onclick="handleCloseSchengen()"></i>
-        <button class="p-submit-btn-1" onclick="goDownload()">Next</button>
+        <button class="p-submit-btn-1" onclick="goDownloadNext()">Next</button>
       </div>
     </div>
-
+    <script>
+      function goDownloadNext() {
+        window.location.href = "/pages/download.html";
+      }
+    </script>
     <script src="/assets/js/popup.js"></script>
     <script src="/assets/js/array.js"></script>
     <script src="/assets/js/visaform.js"></script>

@@ -6,8 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
 function setupEventListeners() {
   const saveButton = document.getElementById("saveButton");
   const useProfileButton = document.getElementById("useProfileButton");
+  const confirmButton = document.getElementById("confirmButton");
 
   saveButton.addEventListener("click", saveFormData);
+  confirmButton.addEventListener("click", comfirmCheck);
   useProfileButton.addEventListener("click", showProfilePopup);
 }
 
@@ -23,6 +25,17 @@ function saveFormData() {
   }
 }
 
+function comfirmCheck() {
+  let popup = document.getElementById("popup");
+  function openPopup() {
+    popup.classList.add("open-popup");
+  }
+  if (validateFormData(getFormData())) {
+    openPopup()
+  } else {
+    alert("Please fill in all required fields.");
+  }
+}
 // Retrieve form data
 function getFormData() {
   return {
@@ -37,7 +50,7 @@ function getFormData() {
     phone: document.getElementById("phone").value,
     nationality: document.getElementById("select_nationalities").value,
     address: document.getElementById("address").value,
-    timestamp: new Date().getTime()  // Add current time as timestamp
+    timestamp: new Date().getTime(), // Add current time as timestamp
   };
 }
 // Start the timer and save the start time to localStorage
