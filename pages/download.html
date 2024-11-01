@@ -32,23 +32,29 @@
             <input type="text" id="id-number" name="id-number" placeholder="" />
           </div>
           <div class="form-group dob-group">
-            <div class="input-group">
-              <label for="dob">Date of Birth :</label>
-            </div>
             <div class="dob-fields">
               <div class="input-group">
-                <input type="text" id="dobDay" name="dobDay" placeholder="DD" />
-              </div>
-              <div class="input-group">
-                <input
-                  type="text"
-                  id="dobMonth"
-                  name="dobMonth"
-                  placeholder="MM"
-                />
-              </div>
-              <div class="input-group">
-                <input type="text" id="dobYear" name="dobYear" placeholder="YYYY" />
+                <label for="dob">Date of Birth :</label>
+                <div class="dob-fields">
+                  <input
+                    type="text"
+                    id="dobDay"
+                    name="dobDay"
+                    placeholder="DD"
+                  />
+                  <input
+                    type="text"
+                    id="dobMonth"
+                    name="dobMonth"
+                    placeholder="MM"
+                  />
+                  <input
+                    type="text"
+                    id="dobYear"
+                    name="dobYear"
+                    placeholder="YYYY"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -100,6 +106,21 @@
         <button class="p-submit-btn-2" onclick="closePopup()">No</button>
       </div>
     </div>
+    <script>
+      // Function to trigger the download of the correct file based on query params.
+      function downloadFile() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const file = urlParams.get("file"); // Get the file name from the query string
+        if (file) {
+          const link = document.createElement("a");
+          link.href = `/assets/download/${file}`; // Assumes the file is in the 'downloads' folder
+          link.download = file;
+          link.click();
+        } else {
+          document.body.innerHTML = "<p>File not found</p>";
+        }
+      }
+    </script>
     <script src="/assets/js/popup.js"></script>
     <script src="/assets/js/download.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

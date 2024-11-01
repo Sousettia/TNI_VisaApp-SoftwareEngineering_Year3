@@ -1,83 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="/assets/css/newEdit.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/assets/css/newEdit.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <div class="head-left">
-                <h2>Edit Profile</h2>
-            </div>
-            <div class="head-right">
-                <img class="icon" src="/assets/image/user_icon.png" />
-            </div>
+      <div class="header">
+        <div class="head-left">
+          <h2>Edit Profile</h2>
         </div>
-        <div class="form-container">
-            <form action="" id="edit-form">
-                <div class="form-section">
-                    <label for="firstname">First Name</label>
-                    <input type="text" id="firstname" name="firstname" />
-                </div>
-                <div class="form-section">
-                    <label for="lastname">Last Name</label>
-                    <input type="text" id="lastname" name="lastname" />
-                </div>
-                <div class="form-section">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" />
-                </div>
-                <div class="form-section">
-                    <label for="dob">Date of Birth</label>
-                    <div class="dob-fields">
-                        <label for="dobDay" class="visually-hidden">Day</label>
-                        <select id="dobDay" name="dobDay">
-                          <option value="">DD</option>
-                          <!-- Add options for days -->
-                        </select>
-            
-                        <label for="dobMonth" class="visually-hidden">Month</label>
-                        <select id="dobMonth" name="dobMonth">
-                          <option value="">MM</option>
-                          <!-- Add options for months -->
-                        </select>
-            
-                        <label for="dobYear" class="visually-hidden">Year</label>
-                        <select id="dobYear" name="dobYear">
-                          <option value="">YYYY</option>
-                          <!-- Add options for years -->
-                        </select>
-
-                        <label for="gender">Gender</label>
-                        <select id="gender" name="gender">
-                          <option value="">Select Gender</option>
-                          <option value="male">Male</option>
-                          <option value="female">Female</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="actions">
-                    <div class="btn">
-                      <a href="#" onclick="window.history.back(); return false;">
-                        <button type="button" class="cancel-btn">Cancel</button>
-                      </a>
-                      <button type="submit" class="save-btn">Save</button>
-                    </div>
-                </div>
-            </form>
+        <div class="head-right">
+          <img class="icon" src="/assets/image/user_icon.png" />
         </div>
+      </div>
+      <div class="form-container">
+        <form action="" id="edit-form">
+          <div class="form-section">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" />
+          </div>
+          <div class="form-section">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" />
+          </div>
+          <div class="form-section">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div class="form-section">
+            <label for="dob">Date of Birth</label>
+            <div class="dob-fields">
+              <label for="dobDay" class="visually-hidden">Day</label>
+              <select id="dobDay" name="dobDay">
+                <option value="">DD</option>
+                <!-- Add options for days -->
+              </select>
 
+              <label for="dobMonth" class="visually-hidden">Month</label>
+              <select id="dobMonth" name="dobMonth">
+                <option value="">MM</option>
+                <!-- Add options for months -->
+              </select>
+
+              <label for="dobYear" class="visually-hidden">Year</label>
+              <select id="dobYear" name="dobYear">
+                <option value="">YYYY</option>
+                <!-- Add options for years -->
+              </select>
+
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+          </div>
+          <div class="actions">
+            <div class="btn">
+              <a href="#" onclick="window.history.back(); return false;">
+                <button type="button" class="cancel-btn">Cancel</button>
+              </a>
+              <button type="submit" class="save-btn">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
-
-
-
-
-
 
     <script src="/assets/js/editprofile.js"></script>
     <script src="/assets/js/dob.js"></script>
-</body>
+  </body>
 </html>

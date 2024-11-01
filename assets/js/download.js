@@ -77,25 +77,6 @@ function getElapsedTime() {
     return "No saved form data found.";
   }
 }
-
-function downloadFile() {
-  // Check the Schengen status from localStorage
-  const needsSchengen = localStorage.getItem("needsSchengen");
-
-  // Define different file paths based on Schengen status
-  console.log(needsSchengen);
-  const fileUrl = needsSchengen
-    ? "/assets/download/Schengen.pdf"
-    : "/assets/download/VisaExample.pdf";
-  console.log(fileUrl);
-  const fileName = needsSchengen ? "Schengen.pdf" : "VisaExample.pdf";
-
-  const link = document.createElement("a");
-  link.href = fileUrl;
-  link.download = fileName;
-  link.click();
-}
-
 // Populate the file list when the page loads
 document.addEventListener("DOMContentLoaded", () => {
   populateFileList();

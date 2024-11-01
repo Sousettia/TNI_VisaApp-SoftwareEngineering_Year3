@@ -127,10 +127,15 @@ textarea {
 .dob-fields {
   display: flex;
   gap: 10px;
+  width: 100%; /* Ensure the fields take the same width as other input fields */
 }
 
 .dob-fields input {
-  width: 32%;
+  width: 100%; /* Distribute the width equally */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
 .dob-group {

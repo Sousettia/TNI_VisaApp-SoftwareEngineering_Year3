@@ -27,15 +27,14 @@ function saveFormData() {
 
 function comfirmCheck() {
   let popup = document.getElementById("popup");
-  function openPopup() {
-    popup.classList.add("open-popup");
-  }
+  
   if (validateFormData(getFormData())) {
-    openPopup()
+    popup.classList.add("open-popup");  // Open the first popup
   } else {
     alert("Please fill in all required fields.");
   }
 }
+
 // Retrieve form data
 function getFormData() {
   return {

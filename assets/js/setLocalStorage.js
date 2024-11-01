@@ -50,5 +50,5 @@ document.getElementById("UserData").addEventListener("submit", function (e) {
   window.location.href = "/pages/newLogin.html";
 
   // Notify user
-  alert("Application stored locally!");
+  alert("Sign-up Completed!");
 });
