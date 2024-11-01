@@ -80,7 +80,7 @@ body {
 
 .logo-placeholder {
   position: absolute;
-  top: -100px; /* Adjust this to control how much the logo is outside the box */
+  top: -125px; /* Adjust this to control how much the logo is outside the box */
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
