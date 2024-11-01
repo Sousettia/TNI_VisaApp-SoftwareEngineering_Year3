@@ -24,8 +24,8 @@ function sendOTP() {
   const email = storedData.email;
   const otpverify = document.getElementsByClassName("otpverify")[0];
 
-  // Generating random number as OTP
-  otp_val = Math.floor(Math.random() * 10000);
+  // Generating random 4-digit number as OTP
+  otp_val = Math.floor(1000 + Math.random() * 9000);
 
   let emailbody = `
   <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background-color: #f9f9f9;">
@@ -106,6 +106,6 @@ document
       localStorage.setItem("UserData", JSON.stringify(storedData));
       alert("Password changed successfully!");
       localStorage.removeItem("otpVerified");
-      window.location.href = "login.html";
+      window.location.href = "newLogin.html";
     }
   });
